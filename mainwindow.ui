@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #1a73e8,       
+        stop: 0.03 #f0f2f5,   
+        
+        stop: 0.5 #f0f2f5,       
+        
+        stop: 0.97 #f0f2f5,     
+        stop: 1 #1a73e8         
+    );
+}
+
+
+QLineEdit {
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    min-width: 250px; 
+    min-height: 40px;
+    font-size: 15px;
+    color: #333;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1a73e8; 
+}
+
+
+QPushButton {
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 150px;
+    min-height: 45px;
+    margin-top: 10px;
+}
+
+QPushButton:hover {
+    background-color: #1557b0;
+}
+
+
+QLabel#welcomeLabel {
+    color: #1a2a6c;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-left: 6px solid #1a73e8;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="maximumSize">
+         <size>
+          <width>413</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+    background-color: #000000 !important; 
+    color: #ffffff !important;           
+    border: 1px solid #444444;          
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+QComboBox QAbstractItemView {
+    background-color: #000000 !important; 
+    color: #ffffff !important;           
+    selection-background-color: #0078d7; 
+    selection-color: white;
+    outline: 0px;
+}
+
+
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="page">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #1a2a6c;
+    font-size: 18px;          
+    font-weight: bold;
+    
+    background-color: #f0f4f8;
+    border-left: 4px solid #0052cc; 
+    padding: 5px 10px;     
+    border-radius: 3px;
+}</string>
+            </property>
+            <property name="text">
+             <string> Welcome Back To InstaPay</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}
+</string>
+            </property>
+            <property name="text">
+             <string>User Name :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="UserEdit">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Password :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="PassEdit">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::EchoMode::Password</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="loginBtn">
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="toSignUpBtn">
+            <property name="text">
+             <string>SignUp</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_2">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="10" column="1">
+           <widget class="QPushButton" name="toLogInBtn">
+            <property name="text">
+             <string>LogIn</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Password :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_17">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Address :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="Password">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::EchoMode::Password</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QPushButton" name="SignUpBtn">
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Email :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="AddressEdit">
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>User Name :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="Phone">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="EmailEdit">
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <widget class="QLineEdit" name="User">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_18">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Phone :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" colspan="3">
+           <widget class="QLabel" name="label_19">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #1a2a6c;
+    font-size: 18px;          
+    font-weight: bold;
+    
+    background-color: #f0f4f8;
+    border-left: 4px solid #0052cc; 
+    padding: 5px 10px;     
+    border-radius: 3px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Welcome To Instapay</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_3">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="18" column="0">
+           <widget class="QPushButton" name="logoutBtn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Logout</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QPushButton" name="historyBtn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>History</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QPushButton" name="viewBalanceBtn">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Check Balance</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QPushButton" name="viewDepositBtn">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Deposit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="18" column="1">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>52</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="17" column="0">
+           <widget class="QPushButton" name="donationBtn">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Donation</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QPushButton" name="Newaccount">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Add bank account</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QPushButton" name="TransferBtn">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>199</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Transfer Money</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" rowspan="4" colspan="3">
+           <widget class="QLabel" name="welcomeLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #1a2a6c;
+    font-size: 18px;        
+    font-weight: bold;
+    
+    background-color: #f0f4f8;
+    border-left: 4px solid #0052cc; 
+    padding: 5px 10px;        
+    border-radius: 3px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Welcome To Instapay</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_4">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Enter Receiver Phone :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="transferPhoneEdit">
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" rowspan="2">
+           <widget class="QComboBox" name="transferFromCombo"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+            </property>
+            <property name="text">
+             <string>Amount :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="amountEdit">
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QPushButton" name="confirmTransferBtn">
+            <property name="text">
+             <string>Confirm Transfer</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QPushButton" name="backToDashBtn">
+            <property name="text">
+             <string>Back</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_5">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QListWidget" name="historyList"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="accComboBox">
+            <property name="styleSheet">
+             <string notr="true">
+QComboBox {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    border: 1px solid #444444;         
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+QComboBox QAbstractItemView {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    selection-background-color: #0078d7;  
+    selection-color: white;
+    outline: 0px;
+}
+
+
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backToDashBtn_1">
+            <property name="text">
+             <string>Back</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_6">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QComboBox" name="charityCombo">
+            <property name="styleSheet">
+             <string notr="true">
+QComboBox {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    border: 1px solid #444444;         
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+QComboBox QAbstractItemView {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    selection-background-color: #0078d7;  
+    selection-color: white;
+    outline: 0px;
+}
+
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>57357</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Decent Life Organization</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Magdi Yacoub Hospital</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QComboBox" name="donationAccCombo"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QPushButton" name="backToDashBtn_2">
+            <property name="text">
+             <string>Back</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QPushButton" name="donationSubmitBtn">
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="donationAmountEdit">
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Amount of Money :</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_7">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="cardNumberEdit">
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1" colspan="2">
+             <widget class="QLineEdit" name="cvvEdit">
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::EchoMode::Password</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="expiryDateEdit">
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="2">
+             <widget class="QLineEdit" name="bankNameEdit">
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+              </property>
+              <property name="text">
+               <string>Bank name :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+              </property>
+              <property name="text">
+               <string>Card No :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+              </property>
+              <property name="text">
+               <string>Expiry Date :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+              </property>
+              <property name="text">
+               <string>CVV :</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="confirmAddAccBtn">
+            <property name="text">
+             <string>Add Account</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="backToDashBtn_3">
+            <property name="text">
+             <string>Back</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_8">
+         <widget class="QComboBox" name="balanceAccCombo">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>160</y>
+            <width>131</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QComboBox {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    border: 1px solid #444444;         
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+QComboBox QAbstractItemView {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    selection-background-color: #0078d7;  
+    selection-color: white;
+    outline: 0px;
+}
+
+
+</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="balanceDisplayLabel">
+          <property name="geometry">
+           <rect>
+            <x>-30</x>
+            <y>240</y>
+            <width>381</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="backToDashBtn_4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>410</y>
+            <width>301</width>
+            <height>55</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Back</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>221</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+          </property>
+          <property name="text">
+           <string>Choose your account :</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_9">
+         <widget class="QComboBox" name="depositAccCombo">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>140</y>
+            <width>121</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QComboBox {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    border: 1px solid #444444;         
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+QComboBox QAbstractItemView {
+    background-color: #000000 !important; 
+    color: #ffffff !important;         
+    selection-background-color: #0078d7;  
+    selection-color: white;
+    outline: 0px;
+}
+
+
+</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="depositAmountEdit">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>240</y>
+            <width>274</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="depositSubmitBtn">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>360</y>
+            <width>301</width>
+            <height>55</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Submit</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="backToDashBtn_5">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>420</y>
+            <width>301</width>
+            <height>55</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Back</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>221</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+          </property>
+          <property name="text">
+           <string>Choose your account :</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>199</y>
+            <width>161</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    background-color: transparent !important;
+    color: #000000 !important;             
+    border: none;                          
+    font-size: 16px;                      
+    font-weight: bold;                     
+}</string>
+          </property>
+          <property name="text">
+           <string>Amount of Money :</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="4" column="1">
+     <spacer name="verticalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>182</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
